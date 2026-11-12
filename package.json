@@ -1,0 +1,33 @@
+{
+  "name": "@civ-clone/base-terrain-properties",
+  "version": "0.1.0",
+  "description": "Terrain properties as tables keyed by terrain class (movement cost, defence multiplier, the turns a job takes), with the lookups a ruleset's rules read them through.",
+  "repository": "git@github.com:civ-clone/base-terrain-properties.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^14.18.63",
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.1.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@civ-clone/core-terrain": "^0.1.4"
+  }
+}
